@@ -3,92 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Special Message </title>
+  <title>A Message for Jo Eskil</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'MedievalSharp', cursive;
-      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'), radial-gradient(circle, #300000, #000000);
-      background-blend-mode: overlay;
-      background-attachment: fixed;
+      background: linear-gradient(to top, #0b0c10, #1f1f1f), url('https://images.unsplash.com/photo-1532274402917-5aadf881bdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
+      background-blend-mode: overlay;
       color: #fce8e8;
       text-shadow: 1px 1px 4px #000;
       overflow-x: hidden;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2em;
-      border-radius: 15px;
-      max-width: 900px;
-      margin: 4em auto;
-      box-shadow: 0 0 25px #aa0000;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 2.5em;
+      border-radius: 20px;
+      max-width: 960px;
+      margin: 5em auto;
+      box-shadow: 0 0 30px #d10000;
+      border: 8px solid url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Viking_frame.svg') center center / cover no-repeat;
     }
 
     h1 {
       text-align: center;
       color: #ff4b4b;
-      font-size: 2.5em;
+      font-size: 3em;
+      letter-spacing: 2px;
+      margin-bottom: 1em;
     }
 
     .cipher-text, .hint {
       margin-top: 2em;
-      font-size: 1.1em;
+      font-size: 1.2em;
       white-space: pre-wrap;
     }
 
     .hint {
-      color: #ffcccc;
+      color: #ffb3b3;
       font-style: italic;
     }
 
     .decoder {
-      margin-top: 2em;
+      margin-top: 2.5em;
       text-align: center;
     }
 
     input[type="text"] {
-      padding: 10px;
-      width: 80%;
+      padding: 12px;
+      width: 85%;
       font-size: 1em;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       margin-bottom: 1em;
+      background-color: #1a1a1a;
+      color: #fff;
+      box-shadow: inset 0 0 5px #aa0000;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-size: 1em;
       background-color: #cc0000;
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s;
     }
 
     button:hover {
       background-color: #990000;
+      transform: scale(1.05);
     }
 
     .output {
-      margin-top: 1em;
+      margin-top: 1.5em;
       padding: 1em;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      font-size: 1.1em;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      font-size: 1.15em;
       white-space: pre-wrap;
     }
 
     .celebration {
       display: none;
       text-align: center;
-      font-size: 1.3em;
+      font-size: 1.4em;
       margin-top: 2em;
-      color: #ffdddd;
+      color: #ffdede;
+    }
+
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
   </style>
 </head>
@@ -100,9 +115,9 @@
   <canvas id="particles"></canvas>
 
   <div class="container">
-    <h1>A Ciphered Message Awaits</h1>
+    <h1>ᚨ Ciphered Message Awaits ᛟ</h1>
     <p class="cipher-text" id="cipher">
-471 177 128 271 043 243 203 055 243 128 243 043 007 235 177 156 027 191 275 140 148 140 083 148 275 275 156 259 191 203 075 259 156 275 051 243 043 271 083 243 275 083 271 243 043 156 275 243 243 243 067 275 083 191 051 075 243 128 067 083 243 083 067 271 083 055 027 083 083 055 243 243 043 259 191 243 083 275 203 148 191 203 055 259 043 243 271 140 043 128 271 243 191 271 051 275 191 148 156 191 067 083 243 191 259 140 191 259 275 243 271 043 128 083 140 055 140 083 083 083 271 243 203 067 271 043 156 128 055 043 271 259 243 243 275 055 275 191 259 259 055 083 148 083 259 067 043 043 128 156 055 259 148 259 043 275 243 156 055 259 055 259 259 275 148 055 140 275 191 259 043 243 156 043 259 259 243 043 275 243 243 203 055 043 055 128 128 043 191 243 259 203 055 191 055 275 128 243 275 156 083 259 259 055 259 243 259 275 128 043 243 043 055 043 043 043 259 275 083 259 259 259 083 259 083 259 259 275 043 083 191 259 055 055 191 128 055 156 259 043 259 275 191 243 043 083 259 043 275 083 259 128 259 275 259 275 055 156 259 243 191 243 128 259 055 128 259 243 083 083 083 259 203 243 259 043 191 191 083 083 191 156 259 259 259 259 243 083 191 083 259 055 243 259 128 259 243 243 243 055 043 083 203 243 259 259 055 191 055 083 083 055 128 055 259 055 275 055 259 259 259 243 259 259 259 259 083 055 259 055 243 243 259 259 259 259 055 083 275 259 275 275 243 259 259 275 083 275 259 055 243 243 275 243 243 259 243 275 083 259 259 243 275 055 259 259 275 259 275 243 259 259 259 243 275 259 275 275 243 259 259 259 243 259 275 243 259 259 259 055 259 275 259 259 275 275 243 259 259 275 259 275 275 259 259 259 259 259 259 259 259
+      [Encrypted message here...]
     </p>
     <p class="hint">Hint: Nihilist cipher — key: BELIEF. Use a Polybius square and the key to decode.</p>
 
@@ -127,21 +142,19 @@
       document.getElementById('celebration').style.display = 'block';
     }
 
-    // Simple particle effect background
     const canvas = document.getElementById("particles");
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 130; i++) {
       particlesArray.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 1,
-        speedX: (Math.random() - 0.5) * 0.5,
-        speedY: (Math.random() - 0.5) * 0.5
+        size: Math.random() * 3 + 1,
+        speedX: (Math.random() - 0.5) * 0.7,
+        speedY: (Math.random() - 0.5) * 0.7
       });
     }
 
@@ -159,9 +172,9 @@
       });
       requestAnimationFrame(animateParticles);
     }
-
     animateParticles();
   </script>
 </body>
 </html>
+
 
