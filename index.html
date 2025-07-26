@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Message for Jo Eskil</title>
-  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Noto+Sans+Runic&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -25,7 +25,17 @@
       max-width: 960px;
       margin: 5em auto;
       box-shadow: 0 0 30px #d10000;
-      border: 8px solid url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Viking_frame.svg') center center / cover no-repeat;
+      position: relative;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 12px solid transparent;
+      border-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Viking_frame.svg') 30 round;
+      pointer-events: none;
+      border-radius: 20px;
     }
 
     h1 {
@@ -34,6 +44,12 @@
       font-size: 3em;
       letter-spacing: 2px;
       margin-bottom: 1em;
+    }
+
+    .runes {
+      font-family: 'Noto Sans Runic', sans-serif;
+      font-size: 1.2em;
+      letter-spacing: 0.1em;
     }
 
     .cipher-text, .hint {
@@ -115,7 +131,7 @@
   <canvas id="particles"></canvas>
 
   <div class="container">
-    <h1>ᚨ Ciphered Message Awaits ᛟ</h1>
+    <h1><span class="runes">ᚨ</span> Ciphered Message Awaits <span class="runes">ᛟ</span></h1>
     <p class="cipher-text" id="cipher">
       [Encrypted message here...]
     </p>
@@ -176,5 +192,6 @@
   </script>
 </body>
 </html>
+
 
 
